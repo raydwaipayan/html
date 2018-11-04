@@ -120,7 +120,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <li><i class="material-icons">explore</i></li>
                     </ul>
                     <ul class="right">
-                        <li><a href="items.html"><i class="material-icons">view_module</i></a></li>
+                        <li><a href="index.php"><i class="material-icons">view_module</i></a></li>
                         <li><a href="#"><i class="material-icons">shopping_cart</i></a></li>
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons">account_circle
                                     arrow_drop_down</i></a></li>
@@ -184,7 +184,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </div>
         <div class="section white">
             <div class="row container">
-                <h2 class="header">ISNTRUO</h2>
+                <h2 class="header">INSTRUO</h2>
                 <p class="grey-text text-darken-3 lighten-3">INSTRUO is the technical fest of IIEST Shibpur.</p>
             </div>
         </div>
