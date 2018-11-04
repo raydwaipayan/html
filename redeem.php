@@ -53,97 +53,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     mysqli_close($link);
   }
-element {
+?>
 
-    --newtab-search-icon: url(blob:null/f51c32d7-231b-4beb-9373-e0c7628fc1a1);
 
-}
-body {
-
-    background-color: var(--newtab-background-color);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    overflow-y: scroll;
-
-}
-body, #root {
-
-    min-height: 100vh;
-
-}
-body {
-
-    --newtab-background-color: #F9F9FA;
-    --newtab-border-primary-color: #B1B1B3;
-    --newtab-border-secondary-color: #D7D7DB;
-    --newtab-button-primary-color: #0060DF;
-    --newtab-button-secondary-color: inherit;
-    --newtab-element-active-color: rgba(215, 215, 219, 0.6);
-    --newtab-element-hover-color: #EDEDF0;
-    --newtab-icon-primary-color: rgba(12, 12, 13, 0.8);
-    --newtab-icon-secondary-color: rgba(12, 12, 13, 0.6);
-    --newtab-icon-tertiary-color: #D7D7DB;
-    --newtab-inner-box-shadow-color: rgba(0, 0, 0, 0.1);
-    --newtab-link-primary-color: #0060DF;
-    --newtab-link-secondary-color: #008EA4;
-    --newtab-text-conditional-color: #4A4A4F;
-    --newtab-text-primary-color: #0C0C0D;
-    --newtab-text-secondary-color: #737373;
-    --newtab-textbox-background-color: #FFF;
-    --newtab-textbox-border: rgba(12, 12, 13, 0.2);
-    --newtab-textbox-focus-color: #0060DF;
-    --newtab-textbox-focus-boxshadow: 0 0 0 1px #0060DF, 0 0 0 4px rgba(0, 96, 223, 0.3);
-    --newtab-contextmenu-background-color: #F9F9FA;
-    --newtab-contextmenu-button-color: #FFF;
-    --newtab-modal-color: #FFF;
-    --newtab-overlay-color: rgba(237, 237, 240, 0.8);
-    --newtab-section-header-text-color: #737373;
-    --newtab-section-navigation-text-color: #737373;
-    --newtab-section-active-contextmenu-color: #0C0C0D;
-    --newtab-search-border-color: transparent;
-    --newtab-search-dropdown-color: #FFF;
-    --newtab-search-dropdown-header-color: #F9F9FA;
-    --newtab-search-header-background-color: rgba(249, 249, 250, 0.95);
-    --newtab-search-icon-color: rgba(12, 12, 13, 0.4);
-    --newtab-topsites-background-color: #FFF;
-    --newtab-topsites-icon-shadow: inset 0 0 0 1px var(--newtab-inner-box-shadow-color);
-    --newtab-topsites-label-color: inherit;
-    --newtab-card-active-outline-color: #D7D7DB;
-    --newtab-card-background-color: #FFF;
-    --newtab-card-hairline-color: rgba(0, 0, 0, 0.1);
-    --newtab-card-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1);
-    --newtab-snippets-background-color: #FFF;
-    --newtab-snippets-hairline-color: transparent;
-
-}
-body {
-
-    margin: 0;
-
-}
-*, ::before, ::after {
-
-    box-sizing: inherit;
-
-}
-background-color: rgb(249, 249, 250);
-box-sizing: border-box;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Helvetica Neue", sans-serif;
-font-size: 16px;
-margin-bottom: 0px;
-margin-left: 0px;
-margin-right: 0px;
-margin-top: 0px;
-min-height: 322px;
-overflow-y: scroll;
-
-  ?>
+  
   <!DOCTYPE html>
   <html lang="en">
-    <head>
+   <head>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="css/materialize.css">
 <script src="js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 	<div class="container">
@@ -159,8 +81,8 @@ overflow-y: scroll;
                         <label for="key">Redemption Code</label>
                     </div>
                     <div class="divider"></div>
-                    <a href="#" >Cancel</a>
-                    <button type="submit" >Redeem</button>
+                    <a class="btn-floating btn-large waves-effect waves-light red" href="#" ><i class="material-icons">close</i></a>
+                    <button class="btn waves-effect waves-light" type="submit" >Redeem</button>
                 </form>
 		</div>
 		</div>
@@ -168,3 +90,4 @@ overflow-y: scroll;
 		</div>
 	</div>
 </body>
+</html>
