@@ -8,10 +8,15 @@ body {
     flex: 1 0 auto;
   }
   .parallax-container {
-    height: 1100px;
+    height: 700px;
   }
   .heading{
     text-align: center;
     font-size: 42px;
     color: #2f2f2fc7;
   }
+@media only screen and (max-width: 600px){
+.parallax-container {
+    height: 1100px;
+  }
+}
