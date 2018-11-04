@@ -30,8 +30,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         <li><i class="material-icons">explore</i></li>
                     </ul>
                     <ul class="right">
-                        <li class="active"><a href="items.html"><i class="material-icons">view_module</i></a></li>
-                        <li><a href="checkout.html"><i class="material-icons">shopping_cart</i></a></li>
+                        <li class="active"><a href="index.php"><i class="material-icons">view_module</i></a></li>
+                        <li><a href="viewcart.php"><i class="material-icons">shopping_cart</i></a></li>
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons">account_circle
                                     arrow_drop_down</i></a></li>
                     </ul>
@@ -148,6 +148,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             </div>
         </div>
 
+       
+
         <div id="modal1" class="modal bottom-sheet">
             <div class="modal-content">
                 <div class="container">
@@ -161,7 +163,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         <div class="col s12 m8">
                             <h5>T-shirt Size chooser</h5>
                             <div class="divider"></div>
-                            <form action="#">
+                            <form method="POST" target="_blank" action="redeem.php">
                                 <div class="row" style="padding-top:20px;">
                                     <div class="col s2">
                                         <label>
@@ -202,8 +204,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                         </label>
                                     </div>
                                     <div class="col s3">
-                                        <button class="btn waves-effect waves-light" type="submit" name="action">Buy
-                                            <i class="material-icons right">check</i>
+                                        <button  type="submit" id="redeem" class="btn waves-effect waves-light">Redeem
+                                            <i class="material-icons right">star</i>
                                         </button>
                                     </div>
                                 </div>
@@ -223,37 +225,34 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                             <div class="divider"></div>
                             <p>Seller: XYZ</p>
                             <h4>₹300</h4>
-            
+
                         </div>
                         <div class="col s12 m8">
                             <h5>T-shirt Size chooser</h5>
                             <div class="divider"></div>
                             <form method="POST" action="addcart.php">
-		            <input name="item" value="ts02" readonly/>
-                            <input name="price" value="300" readonly/>
-
                                 <div class="row" style="padding-top:20px;">
                                     <div class="col s2">
                                         <label>
-                                            <input name="size" type="radio" value="S"/>
+                                            <input name="size" type="radio" value="S" />
                                             <span>S</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="size" type="radio" value="M"/>
+                                            <input name="size" type="radio" value="M" />
                                             <span>M</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="size" type="radio" checked value="L"/>
+                                            <input name="size" type="radio" checked value="L" />
                                             <span>L</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="size" type="radio" value="XL"/>
+                                            <input name="size" type="radio" value="XL" />
                                             <span>XL</span>
                                         </label>
                                     </div>
@@ -267,7 +266,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col s3 offset-s9">
+                                    <div class="col s4">
+                                        <input name="item" value="TS02" readonly />
+                                    </div>
+                                    <div class="col s4">
+                                        <input name="price" value="300" readonly />
+                                    </div>
+                                    <div class="col s3 offset-s1">
                                         <button class="btn waves-effect waves-light" type="submit" name="submit">Buy
                                             <i class="material-icons right">check</i>
                                         </button>
@@ -280,47 +285,48 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             </div>
         </div>
 
+
         <div id="modal3" class="modal bottom-sheet">
             <div class="modal-content">
                 <div class="container">
                     <div class="row">
                         <div class="col s12 m4">
-                            <h5>INSTRUO Winner T-shirt</h5>
+                            <h5>INSTRUO T-shirt</h5>
                             <div class="divider"></div>
                             <p>Seller: XYZ</p>
-                            <h4>₹300</h4>
+                            <h4>₹270</h4>
                         </div>
                         <div class="col s12 m8">
                             <h5>T-shirt Size chooser</h5>
                             <div class="divider"></div>
-                            <form action="#">
+                            <form method="POST" action="addcart.php">
                                 <div class="row" style="padding-top:20px;">
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" />
+                                            <input name="size" type="radio" value="S" />
                                             <span>S</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" />
+                                            <input name="size" type="radio" value="M" />
                                             <span>M</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" checked />
+                                            <input name="size" type="radio" checked value="L" />
                                             <span>L</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" />
+                                            <input name="size" type="radio" value="XL" />
                                             <span>XL</span>
                                         </label>
                                     </div>
                                     <div class="input-field col s2 offset-s1">
-                                        <select>
+                                        <select name="quantity" required>
                                             <option value="1" selected>1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -329,14 +335,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col s9">
-                                        <label>
-                                            <input type="checkbox" class="filled-in" checked="checked" />
-                                            <span>I want my name on back of T-shirt</span>
-                                        </label>
+                                    <div class="col s4">
+                                        <input name="item" value="TS03" readonly />
                                     </div>
-                                    <div class="col s3">
-                                        <button class="btn waves-effect waves-light" type="submit" name="action">Buy
+                                    <div class="col s4">
+                                        <input name="price" value="270" readonly />
+                                    </div>
+                                    <div class="col s3 offset-s1">
+                                        <button class="btn waves-effect waves-light" type="submit" name="submit">Buy
                                             <i class="material-icons right">check</i>
                                         </button>
                                     </div>
@@ -353,42 +359,42 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div class="container">
                     <div class="row">
                         <div class="col s12 m4">
-                            <h5>INSTRUO Winner T-shirt</h5>
+                            <h5>INSTRUO T-shirt</h5>
                             <div class="divider"></div>
                             <p>Seller: XYZ</p>
-                            <h4>₹300</h4>
+                            <h4>₹280</h4>
                         </div>
                         <div class="col s12 m8">
                             <h5>T-shirt Size chooser</h5>
                             <div class="divider"></div>
-                            <form action="#">
+                            <form method="POST" action="addcart.php">
                                 <div class="row" style="padding-top:20px;">
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" />
+                                            <input name="size" type="radio" value="S" />
                                             <span>S</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" />
+                                            <input name="size" type="radio" value="M" />
                                             <span>M</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" checked />
+                                            <input name="size" type="radio" checked value="L" />
                                             <span>L</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" />
+                                            <input name="size" type="radio" value="XL" />
                                             <span>XL</span>
                                         </label>
                                     </div>
                                     <div class="input-field col s2 offset-s1">
-                                        <select>
+                                        <select name="quantity" required>
                                             <option value="1" selected>1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -397,14 +403,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col s9">
-                                        <label>
-                                            <input type="checkbox" class="filled-in" checked="checked" />
-                                            <span>I want my name on back of T-shirt</span>
-                                        </label>
+                                    <div class="col s4">
+                                        <input name="item" value="TS04" readonly />
                                     </div>
-                                    <div class="col s3">
-                                        <button class="btn waves-effect waves-light" type="submit" name="action">Buy
+                                    <div class="col s4">
+                                        <input name="price" value="280" readonly />
+                                    </div>
+                                    <div class="col s3 offset-s1">
+                                        <button class="btn waves-effect waves-light" type="submit" name="submit">Buy
                                             <i class="material-icons right">check</i>
                                         </button>
                                     </div>
@@ -421,42 +427,42 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div class="container">
                     <div class="row">
                         <div class="col s12 m4">
-                            <h5>INSTRUO Winner T-shirt</h5>
+                            <h5>INSTRUO T-shirt</h5>
                             <div class="divider"></div>
                             <p>Seller: XYZ</p>
-                            <h4>₹300</h4>
+                            <h4>₹320</h4>
                         </div>
                         <div class="col s12 m8">
                             <h5>T-shirt Size chooser</h5>
                             <div class="divider"></div>
-                            <form action="#">
+                            <form method="POST" action="addcart.php">
                                 <div class="row" style="padding-top:20px;">
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" />
+                                            <input name="size" type="radio" value="S" />
                                             <span>S</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" />
+                                            <input name="size" type="radio" value="M" />
                                             <span>M</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" checked />
+                                            <input name="size" type="radio" checked value="L" />
                                             <span>L</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" />
+                                            <input name="size" type="radio" value="XL" />
                                             <span>XL</span>
                                         </label>
                                     </div>
                                     <div class="input-field col s2 offset-s1">
-                                        <select>
+                                        <select name="quantity" required>
                                             <option value="1" selected>1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -465,14 +471,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col s9">
-                                        <label>
-                                            <input type="checkbox" class="filled-in" checked="checked" />
-                                            <span>I want my name on back of T-shirt</span>
-                                        </label>
+                                    <div class="col s4">
+                                        <input name="item" value="TS05" readonly />
                                     </div>
-                                    <div class="col s3">
-                                        <button class="btn waves-effect waves-light" type="submit" name="action">Buy
+                                    <div class="col s4">
+                                        <input name="price" value="320" readonly />
+                                    </div>
+                                    <div class="col s3 offset-s1">
+                                        <button class="btn waves-effect waves-light" type="submit" name="submit">Buy
                                             <i class="material-icons right">check</i>
                                         </button>
                                     </div>
@@ -489,42 +495,42 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div class="container">
                     <div class="row">
                         <div class="col s12 m4">
-                            <h5>INSTRUO Winner T-shirt</h5>
+                            <h5>INSTRUO T-shirt</h5>
                             <div class="divider"></div>
                             <p>Seller: XYZ</p>
-                            <h4>₹300</h4>
+                            <h4>₹250</h4>
                         </div>
                         <div class="col s12 m8">
                             <h5>T-shirt Size chooser</h5>
                             <div class="divider"></div>
-                            <form action="#">
+                            <form method="POST" action="addcart.php">
                                 <div class="row" style="padding-top:20px;">
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" />
+                                            <input name="size" type="radio" value="S" />
                                             <span>S</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" />
+                                            <input name="size" type="radio" value="M" />
                                             <span>M</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" checked />
+                                            <input name="size" type="radio" checked value="L" />
                                             <span>L</span>
                                         </label>
                                     </div>
                                     <div class="col s2">
                                         <label>
-                                            <input name="group1" type="radio" />
+                                            <input name="size" type="radio" value="XL" />
                                             <span>XL</span>
                                         </label>
                                     </div>
                                     <div class="input-field col s2 offset-s1">
-                                        <select>
+                                        <select name="quantity" required>
                                             <option value="1" selected>1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -533,14 +539,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col s9">
-                                        <label>
-                                            <input type="checkbox" class="filled-in" checked="checked" />
-                                            <span>I want my name on back of T-shirt</span>
-                                        </label>
+                                    <div class="col s4">
+                                        <input name="item" value="TS06" readonly />
                                     </div>
-                                    <div class="col s3">
-                                        <button class="btn waves-effect waves-light" type="submit" name="submit" value="Add item">Buy
+                                    <div class="col s4">
+                                        <input name="price" value="250" readonly />
+                                    </div>
+                                    <div class="col s3 offset-s1">
+                                        <button class="btn waves-effect waves-light" type="submit" name="submit">Buy
                                             <i class="material-icons right">check</i>
                                         </button>
                                     </div>
@@ -551,6 +557,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
             </div>
         </div>
+
     </main>
 
 
@@ -583,5 +590,3 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </body>
 
 </html>
-
-

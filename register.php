@@ -117,11 +117,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <nav>
             <div class="container">
                 <div class="nav-wrapper">
-                    <ul class="left">
-                        <li><i class="material-icons">explore</i></li>
-                    </ul>
+                        <a href="#" class="brand-logo"><img src="images/logo.png" height="64" width="64"></a>
                     <ul class="right">
-                        <li><a href="items.html"><i class="material-icons">view_module</i></a></li>
+                        <li><a href="#"><i class="material-icons">view_module</i></a></li>
                         <li><a href="#"><i class="material-icons">shopping_cart</i></a></li>
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons">account_circle
                                     arrow_drop_down</i></a></li>
@@ -132,10 +130,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
 
     <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">two</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">Sign out</a></li>
+        <li><a href="#!">Log In</a></li>
     </ul>
 
     <main>
@@ -144,8 +139,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="parallax"><img src="images/sample1.jpg"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col s12 l7 m6"><span class="flow-text">This div is 7-columns wide on pushed to the
-                            right by 5-columns.</span></div>
+                    <div class="col s12 l7 m6">
+<h1>
+Welcome to the official online T-shirt store of Instruo
+</h1>
+<h3 class="white-text">The technical fest of IIEST Shibpur.</h3>
+                    </div>
                     <div class="col s12 l5 m6" style="padding-top:40px; padding-bottom:40px">
                         <div class="card white darken-1">
                             <div class="card-content teal-text">
@@ -195,20 +194,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                                 <i class="material-icons right">close</i>
                                             </button>
                                         </div>
-                                        <p>Already have an account? <a href="login.php">Login here</a>.</p>
+                                        <div class="col s18 offset-s1" style="padding-top:20px;">
+                                        <p>Already have an account? <a href="login.php">Login here</a>.</p></div>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="section white">
-            <div class="row container">
-                <h2 class="header">Parallax</h2>
-                <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or
-                    image in this case, is moved at a different speed than the foreground content while scrolling.</p>
             </div>
         </div>
         <div class="container">
@@ -220,23 +213,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <footer class="page-footer">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                        content.</p>
+                <div class="col m6 s12">
+                    <div class="col s12 l6 offset-l1"><h5 class="white-text"><i class="material-icons">location_city</i>Address</h5>
+                        <a class="white-text">Indian Institute of Engineering Science and Technology, Shibpur, Howrah, West Bengal.</a>
+                    </div>
+                    <p class="grey-text text-lighten-4"></p>
                 </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                    </ul>
+                <div class="col m6 s12">
+                        <div class="col s12 l6 offset-l5"><h5 class="white-text"><i class="material-icons">phone</i>Contact Us</h5>
+                            <a class="white-text">Phone: 1234567890</a>
+                            <a class="white-text">Email: IIESTS@nic.in</a>
+                        </div>
+                        <p class="grey-text text-lighten-4"></p>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                Instruo © 2018 Copyright.
+                
             </div>
         </div>
     </footer>
