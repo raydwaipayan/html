@@ -97,11 +97,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Close connection
     mysqli_close($link);
-   header("location: login.php");
 }
 ?>
 
-<html>
+<!DOCTYPE html>
 
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -117,9 +116,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <nav>
             <div class="container">
                 <div class="nav-wrapper">
-                        <a href="#" class="brand-logo"><img src="images/logo.png" height="64" width="64"></a>
+                    <ul class="left">
+                        <li><i class="material-icons">explore</i></li>
+                    </ul>
                     <ul class="right">
-                        <li><a href="#"><i class="material-icons">view_module</i></a></li>
+                        <li><a href="items.html"><i class="material-icons">view_module</i></a></li>
                         <li><a href="#"><i class="material-icons">shopping_cart</i></a></li>
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons">account_circle
                                     arrow_drop_down</i></a></li>
@@ -130,7 +131,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
 
     <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">Log In</a></li>
+        <li class="divider"></li>
+        <li><a href="login.php">Sign in</a></li>
     </ul>
 
     <main>
@@ -139,69 +141,51 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="parallax"><img src="images/sample1.jpg"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col s12 l7 m6">
-<h1>
-Welcome to the official online T-shirt store of Instruo
-</h1>
-<h3 class="white-text">The technical fest of IIEST Shibpur.</h3>
-                    </div>
+                    <div class="col s12 l7 m6"><span class="flow-text"><h3>This is the official T-shirt website of INSTRUO</h3></span></div>
                     <div class="col s12 l5 m6" style="padding-top:40px; padding-bottom:40px">
                         <div class="card white darken-1">
                             <div class="card-content teal-text">
                                 <span class="card-title">Sign Up</span>
                                 <div class="row">
-                                    <form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]); ?>" method="post"
-                                        class="col s12">
-                                        <div class="row">
-                                            <div class="input-field col s12 <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
-                                                <i class="material-icons prefix">account_box</i>
-                                                <input id="name" name="name" class="validate" value="<?php echo $name; ?>"
-                                                    type="text">
-                                                <label for="name">Name</label>
-                                                <span class="help-block">
-                                                    <?php echo $name_err; ?></span>
-                                            </div>
-                                            <div class="input-field col s12 <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-                                                <i class="material-icons prefix">email</i>
-                                                <input placeholder="someone@example.com" id="email" type="text" class="validate"
-                                                    value="<?php echo $email; ?>">
-                                                <label for="email">Email</label>
-                                                <span class="help-block">
-                                                    <?php echo $email_err; ?></span>
-                                            </div>
-                                            <div class="input-field col s12 <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                                                <i class="material-icons prefix">vpn_key</i>
-                                                <input id="password" type="password" class="validate" value="<?php echo $password; ?>">
-                                                <label for="password">Password</label>
-                                                <span class="help-block">
-                                                    <?php echo $password_err; ?></span>
-                                            </div>
-                                            <div class="input-field col s12 <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
-                                                <i class="material-icons prefix">vpn_key</i>
-                                                <input id="password" type="password" class="validate" value="<?php echo $confirm_password; ?>">
-                                                <label for="password">Confirm Password</label>
-                                                <span class="help-block">
-                                                    <?php echo $confirm_password_err; ?></span>
-                                            </div>
-                                        </div>
-                                        <div class="col s3 offset-s2">
-                                            <button class="btn waves-effect waves-light" type="submit" value="Submit">Submit
-                                                <i class="material-icons right">send</i>
-                                            </button>
-                                        </div>
-                                        <div class="col s3 offset-s2">
-                                            <button class="btn waves-effect waves-light" type="reset" value="Reset">Reset
-                                                <i class="material-icons right">close</i>
-                                            </button>
-                                        </div>
-                                        <div class="col s18 offset-s1" style="padding-top:20px;">
-                                        <p>Already have an account? <a href="login.php">Login here</a>.</p></div>
-                                    </form>
+                                  <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                                    <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
+                                      <label>Name</label>
+                                      <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
+                                      <span class="help-block"><?php echo $name_err; ?></span>
+                                    </div>
+                                    <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
+                                      <label>Email</label>
+                                      <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
+                                      <span class="help-block"><?php echo $email_err; ?></span>
+                                    </div>
+                                    <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                                      <label>Password</label>
+                                      <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
+                                      <span class="help-block"><?php echo $password_err; ?></span>
+                                    </div>
+                                    <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+                                      <label>Confirm Password</label>
+                                      <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
+                                      <span class="help-block"><?php echo $confirm_password_err; ?></span>
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="submit" class="btn btn-primary" value="Submit">
+                                      <input type="reset" class="btn btn-default" value="Reset">
+                                    </div>
+                                    <p>Already have an account? <a href="login.php">Login here</a>.</p>
+                                  </form>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="section white">
+            <div class="row container">
+                <h2 class="header">ISNTRUO</h2>
+                <p class="grey-text text-darken-3 lighten-3">INSTRUO is the technical fest of IIEST Shibpur.</p>
             </div>
         </div>
         <div class="container">
@@ -213,25 +197,23 @@ Welcome to the official online T-shirt store of Instruo
     <footer class="page-footer">
         <div class="container">
             <div class="row">
-                <div class="col m6 s12">
-                    <div class="col s12 l6 offset-l1"><h5 class="white-text"><i class="material-icons">location_city</i>Address</h5>
-                        <a class="white-text">Indian Institute of Engineering Science and Technology, Shibpur, Howrah, West Bengal.</a>
-                    </div>
-                    <p class="grey-text text-lighten-4"></p>
+                <div class="col l6 s12">
+                    <h5 class="white-text">ADDRESS</h5>
+                    <p class="grey-text text-lighten-4">HOWRAH- 711 103, WEST BENGAL, INDIA.</p>
+		    <p class="grey-text text-lighten-4">An institute of National Importance under MHRD, Government of India.</p>
                 </div>
-                <div class="col m6 s12">
-                        <div class="col s12 l6 offset-l5"><h5 class="white-text"><i class="material-icons">phone</i>Contact Us</h5>
-                            <a class="white-text">Phone: 1234567890</a>
-                            <a class="white-text">Email: IIESTS@nic.in</a>
-                        </div>
-                        <p class="grey-text text-lighten-4"></p>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text"></h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!"></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                Instruo © 2018 Copyright.
-                
+                © 2018 IIEST
+                <a class="grey-text text-lighten-4 right" href="#!"></a>
             </div>
         </div>
     </footer>
