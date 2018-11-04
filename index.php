@@ -44,7 +44,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <li><a href="#!">one</a></li>
         <li><a href="#!">two</a></li>
         <li class="divider"></li>
-        <li><a href="#!">Sign out</a></li>
+        <li><a href="logout.php">Sign out</a></li>
     </ul>
 
     <main>
